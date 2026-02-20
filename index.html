@@ -125,8 +125,8 @@
             <label for="port">Port</label>
             <input type="text" id="port" value="4490" placeholder="4490">
 
-            <label for="macro">Macro Name</label>
-            <input type="text" id="macro" value="Test to display alert" placeholder="Macro name">
+            <label for="macro">Macro UUID</label>
+            <input type="text" id="macro" value="FDFA81B0-D7D4-49CD-BEA7-40C926C985EE" placeholder="Macro UUID">
         </div>
 
         <button class="trigger-btn" onclick="triggerMacro()">
@@ -165,7 +165,7 @@
 
             fetch(url, { mode: "no-cors" })
                 .then(() => {
-                    status.textContent = `Triggered "${macro}" \u2713`;
+                    status.textContent = `Triggered macro \u2713`;
                     status.className = "status success";
                 })
                 .catch((err) => {
